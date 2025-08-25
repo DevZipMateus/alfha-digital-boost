@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 
@@ -59,7 +58,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/9198e11c-91c7-4776-aba7-e317c269e308.png" 
+                src="/lovable-uploads/f28b729e-44d3-4f73-8dcf-0edcb3a49f11.png" 
                 alt="Alfha Gestão Empresarial - Logo" 
                 className="h-12 w-auto"
               />
