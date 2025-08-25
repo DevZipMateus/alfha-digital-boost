@@ -4,9 +4,15 @@ import { ArrowRight, CheckCircle, TrendingUp, Shield } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center hero-gradient hero-pattern overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/lovable-uploads/6131ca7f-412f-426f-91b1-98f235d6ed1d.png)' }}
+      ></div>
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-brand/80"></div>
       
       {/* Floating Elements */}
       <div className="absolute top-20 right-10 w-20 h-20 bg-brand-secondary/20 rounded-full animate-float"></div>
