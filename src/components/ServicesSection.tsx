@@ -58,46 +58,46 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="servicos" className="section-padding bg-brand/5">
-      <div className="section-container">
+    <section id="servicos" className="py-12 sm:py-16 lg:py-20 bg-brand/5">
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <span className="inline-block bg-brand-secondary/10 text-brand-secondary px-4 py-2 rounded-full text-sm font-medium mb-4">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20 animate-fade-in">
+          <span className="inline-block bg-brand-secondary/10 text-brand-secondary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
             Nossos Serviços
           </span>
-          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold text-brand mb-4 sm:mb-6">
             Soluções Completas de Gestão
           </h2>
-          <p className="text-lg text-brand/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-brand/80 max-w-4xl mx-auto leading-relaxed px-4">
             Oferecemos um portfólio completo de serviços para transformar a gestão da sua empresa. 
             Desde a implantação até o suporte contínuo, estamos com você em cada etapa.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-card animate-fade-in"
+              className="service-card animate-fade-in bg-white rounded-xl lg:rounded-2xl p-6 sm:p-8 shadow-lg border border-brand/5 hover:shadow-xl transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 bg-brand-secondary/10 rounded-xl flex items-center justify-center mb-6">
-                <service.icon className="w-7 h-7 text-brand-secondary" />
+              <div className="w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 bg-brand-secondary/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                <service.icon className="w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 text-brand-secondary" />
               </div>
               
-              <h3 className="text-xl font-heading font-semibold text-brand mb-4">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-heading font-semibold text-brand mb-3 sm:mb-4">
                 {service.title}
               </h3>
               
-              <p className="text-brand/70 mb-6 leading-relaxed">
+              <p className="text-brand/70 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 {service.description}
               </p>
               
-              <ul className="space-y-2">
+              <ul className="space-y-2 sm:space-y-3">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-brand/80">
-                    <div className="w-1.5 h-1.5 bg-brand-secondary rounded-full mr-3"></div>
+                  <li key={featureIndex} className="flex items-center text-xs sm:text-sm text-brand/80">
+                    <div className="w-1.5 h-1.5 bg-brand-secondary rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                     {feature}
                   </li>
                 ))}
@@ -107,32 +107,32 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-xl border border-brand/10 animate-fade-in">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="bg-white rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-12 xl:p-16 shadow-xl border border-brand/10 animate-fade-in">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h3 className="text-2xl lg:text-3xl font-heading font-bold text-brand mb-4">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-heading font-bold text-brand mb-4 sm:mb-6">
                 Pronto para transformar sua gestão?
               </h3>
-              <p className="text-brand/80 mb-6 leading-relaxed">
+              <p className="text-brand/80 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base lg:text-lg">
                 Nossa equipe está preparada para analisar suas necessidades e propor a melhor 
                 solução para sua empresa. Agende uma demonstração gratuita e veja como podemos 
                 ajudar seu negócio a crescer.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a 
                   href="https://wa.me/5594984410081" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-primary inline-flex items-center justify-center space-x-2 group"
+                  className="btn-primary inline-flex items-center justify-center space-x-2 group px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base"
                 >
                   <span>Solicitar Demonstração</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 
                 <a 
                   href="mailto:comercial.egestor@alfha.net.br"
-                  className="btn-outline inline-flex items-center justify-center space-x-2"
+                  className="btn-outline inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base"
                 >
                   <span>Enviar E-mail</span>
                 </a>
@@ -140,17 +140,17 @@ const ServicesSection = () => {
             </div>
             
             <div className="text-center lg:text-right">
-              <div className="inline-block bg-brand/5 rounded-2xl p-8">
-                <div className="text-4xl font-bold text-brand-secondary mb-2">100%</div>
-                <div className="text-brand/70 mb-4">Satisfação garantida</div>
+              <div className="inline-block bg-brand/5 rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-10 max-w-sm mx-auto">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-secondary mb-2">100%</div>
+                <div className="text-brand/70 mb-4 sm:mb-6 text-sm sm:text-base">Satisfação garantida</div>
                 
-                <div className="grid grid-cols-2 gap-4 text-center">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-brand mb-1">15 dias</div>
+                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-brand mb-1">15 dias</div>
                     <div className="text-xs text-brand/60">Implantação média</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-brand mb-1">24/7</div>
+                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-brand mb-1">24/7</div>
                     <div className="text-xs text-brand/60">Suporte disponível</div>
                   </div>
                 </div>
