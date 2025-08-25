@@ -24,9 +24,11 @@ const Header = () => {
   };
 
   return (
-    <>
+    <header className="fixed w-full z-50 top-0">
       {/* Top Contact Bar */}
-      <div className="bg-brand-secondary text-brand py-2 px-4 text-sm hidden md:block">
+      <div className={`bg-brand-secondary text-brand py-2 px-4 text-sm transition-all duration-300 ${
+        isScrolled ? 'hidden md:hidden' : 'hidden md:block'
+      }`}>
         <div className="section-container flex justify-between items-center">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
@@ -45,14 +47,14 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header 
-        className={`fixed w-full z-50 transition-all duration-300 ${
+      <nav 
+        className={`transition-all duration-300 ${
           isScrolled 
             ? 'bg-white/95 backdrop-blur-md shadow-lg' 
             : 'bg-transparent'
         }`}
       >
-        <nav className="section-container">
+        <div className="section-container">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3">
@@ -179,8 +181,8 @@ const Header = () => {
             </div>
           )}
         </nav>
-      </header>
-    </>
+      </nav>
+    </header>
   );
 };
 
