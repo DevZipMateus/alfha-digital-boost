@@ -1,23 +1,23 @@
-
 import React from 'react';
 import { ArrowRight, CheckCircle, TrendingUp, Shield } from 'lucide-react';
-
 const HeroSection = () => {
-  return (
-    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden pt-20 sm:pt-24 lg:pt-0">
+  return <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden pt-20 sm:pt-24 lg:pt-0">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/lovable-uploads/6131ca7f-412f-426f-91b1-98f235d6ed1d.png)' }}
-      ></div>
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: 'url(/lovable-uploads/6131ca7f-412f-426f-91b1-98f235d6ed1d.png)'
+    }}></div>
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-brand/80"></div>
       
       {/* Floating Elements */}
       <div className="absolute top-32 sm:top-20 right-2 sm:right-4 md:right-10 w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 bg-brand-secondary/20 rounded-full animate-float"></div>
-      <div className="absolute bottom-20 left-2 sm:left-4 md:left-10 w-10 sm:w-12 md:w-16 h-10 sm:h-12 md:h-16 bg-brand-secondary/30 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 right-4 sm:right-8 md:right-20 w-6 sm:w-8 md:w-12 h-6 sm:h-8 md:h-12 bg-white/10 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-20 left-2 sm:left-4 md:left-10 w-10 sm:w-12 md:w-16 h-10 sm:h-12 md:h-16 bg-brand-secondary/30 rounded-full animate-float" style={{
+      animationDelay: '1s'
+    }}></div>
+      <div className="absolute top-1/2 right-4 sm:right-8 md:right-20 w-6 sm:w-8 md:w-12 h-6 sm:h-8 md:h-12 bg-white/10 rounded-full animate-float" style={{
+      animationDelay: '2s'
+    }}></div>
 
       <div className="container mx-auto px-3 sm:px-4 lg:px-8 relative z-10 py-8 sm:py-12 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
@@ -63,20 +63,14 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:gap-3 lg:gap-4 justify-center lg:justify-start mb-6 sm:mb-8 lg:mb-12 px-2 lg:px-0">
-              <a 
-                href="https://wa.me/5594984410081" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-secondary inline-flex items-center justify-center space-x-2 group px-4 sm:px-6 lg:px-8 py-3 text-sm sm:text-base"
-              >
+              <a href="https://wa.me/5594984410081" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex items-center justify-center space-x-2 group px-4 sm:px-6 lg:px-8 py-3 text-sm sm:text-base">
                 <span>Solicitar Demonstração</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               
-              <button 
-                onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-outline bg-white/10 border-white/40 text-white hover:bg-white hover:text-brand inline-flex items-center justify-center space-x-2 px-4 sm:px-6 lg:px-8 py-3 text-sm sm:text-base"
-              >
+              <button onClick={() => document.getElementById('servicos')?.scrollIntoView({
+              behavior: 'smooth'
+            })} className="btn-outline bg-white/10 border-white/40 text-white hover:bg-white hover:text-brand inline-flex items-center justify-center space-x-2 px-4 sm:px-6 lg:px-8 py-3 text-sm sm:text-base">
                 <span>Conhecer Serviços</span>
               </button>
             </div>
@@ -100,62 +94,7 @@ const HeroSection = () => {
 
           {/* Visual Elements */}
           <div className="relative animate-slide-in-right mt-6 lg:mt-0">
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-3 sm:p-4 lg:p-6 xl:p-8 border border-white/20">
-              {/* Dashboard Preview */}
-              <div className="bg-white rounded-xl p-3 sm:p-4 lg:p-6 shadow-2xl">
-                <div className="flex items-center justify-between mb-3 sm:mb-4 lg:mb-6">
-                  <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-brand">Dashboard Gerencial</h3>
-                  <div className="flex space-x-1.5 sm:space-x-2">
-                    <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-green-400 rounded-full"></div>
-                    <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-yellow-400 rounded-full"></div>
-                    <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-400 rounded-full"></div>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:gap-4 mb-3 sm:mb-4 lg:mb-6">
-                  <div className="bg-brand/5 rounded-lg p-2 sm:p-3 lg:p-4">
-                    <div className="flex items-center space-x-1 sm:space-x-2 mb-1 sm:mb-2">
-                      <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-brand-secondary" />
-                      <span className="text-xs text-brand/70">Faturamento</span>
-                    </div>
-                    <div className="text-sm sm:text-base lg:text-xl font-bold text-brand">R$ 125.000</div>
-                    <div className="text-xs text-green-600">↗ +15% vs mês anterior</div>
-                  </div>
-                  
-                  <div className="bg-brand/5 rounded-lg p-2 sm:p-3 lg:p-4">
-                    <div className="flex items-center space-x-1 sm:space-x-2 mb-1 sm:mb-2">
-                      <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-brand-secondary" />
-                      <span className="text-xs text-brand/70">Margem</span>
-                    </div>
-                    <div className="text-sm sm:text-base lg:text-xl font-bold text-brand">32%</div>
-                    <div className="text-xs text-green-600">↗ +3% vs mês anterior</div>
-                  </div>
-                </div>
-                
-                {/* Progress Bars */}
-                <div className="space-y-2 sm:space-y-3">
-                  <div>
-                    <div className="flex justify-between text-xs mb-1">
-                      <span className="text-brand/70">Vendas do Mês</span>
-                      <span className="text-brand">78%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5">
-                      <div className="bg-brand-secondary h-1.5 rounded-full" style={{ width: '78%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between text-xs mb-1">
-                      <span className="text-brand/70">Estoque Otimizado</span>
-                      <span className="text-brand">92%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5">
-                      <div className="bg-green-500 h-1.5 rounded-full" style={{ width: '92%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -166,8 +105,6 @@ const HeroSection = () => {
           <div className="w-1 h-2 sm:h-3 bg-white/50 rounded-full mt-1.5 sm:mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
