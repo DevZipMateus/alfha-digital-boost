@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header className="fixed w-full z-50 top-0">
       {/* Top Contact Bar */}
-      <div className={`bg-brand-secondary text-brand py-2 px-4 text-sm transition-all duration-300 ${
+      <div className={`bg-yellow-500 text-yellow-900 py-2 px-4 text-sm transition-all duration-300 ${
         isScrolled ? 'hidden md:hidden' : 'hidden md:block'
       }`}>
         <div className="section-container flex justify-between items-center">
@@ -50,8 +50,8 @@ const Header = () => {
       <nav 
         className={`transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-            : 'bg-transparent'
+            ? 'bg-yellow-400/95 backdrop-blur-md shadow-lg' 
+            : 'bg-yellow-400'
         }`}
       >
         <div className="section-container">
@@ -64,14 +64,10 @@ const Header = () => {
                 className="h-12 w-auto"
               />
               <div className="hidden sm:block">
-                <h1 className={`font-heading font-bold text-xl ${
-                  isScrolled ? 'text-brand' : 'text-white'
-                }`}>
+                <h1 className="font-heading font-bold text-xl text-yellow-900">
                   ALFHA
                 </h1>
-                <p className={`text-xs ${
-                  isScrolled ? 'text-brand/70' : 'text-white/80'
-                }`}>
+                <p className="text-xs text-yellow-800">
                   GESTÃO EMPRESARIAL
                 </p>
               </div>
@@ -81,31 +77,31 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-8">
               <button 
                 onClick={() => scrollToSection('inicio')}
-                className={`nav-link ${isScrolled ? 'text-brand hover:text-brand-secondary' : ''}`}
+                className="nav-link text-yellow-900 hover:text-yellow-700"
               >
                 Início
               </button>
               <button 
                 onClick={() => scrollToSection('sobre')}
-                className={`nav-link ${isScrolled ? 'text-brand hover:text-brand-secondary' : ''}`}
+                className="nav-link text-yellow-900 hover:text-yellow-700"
               >
                 Sobre
               </button>
               <button 
                 onClick={() => scrollToSection('servicos')}
-                className={`nav-link ${isScrolled ? 'text-brand hover:text-brand-secondary' : ''}`}
+                className="nav-link text-yellow-900 hover:text-yellow-700"
               >
                 Serviços
               </button>
               <button 
                 onClick={() => scrollToSection('depoimentos')}
-                className={`nav-link ${isScrolled ? 'text-brand hover:text-brand-secondary' : ''}`}
+                className="nav-link text-yellow-900 hover:text-yellow-700"
               >
                 Depoimentos
               </button>
               <button 
                 onClick={() => scrollToSection('contato')}
-                className={`nav-link ${isScrolled ? 'text-brand hover:text-brand-secondary' : ''}`}
+                className="nav-link text-yellow-900 hover:text-yellow-700"
               >
                 Contato
               </button>
@@ -115,7 +111,7 @@ const Header = () => {
                 href="https://wa.me/5594984410081" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-secondary"
+                className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
               >
                 Fale Conosco
               </a>
@@ -124,9 +120,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`lg:hidden p-2 rounded-md ${
-                isScrolled ? 'text-brand' : 'text-white'
-              }`}
+              className="lg:hidden p-2 rounded-md text-yellow-900"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -135,35 +129,35 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
+            <div className="lg:hidden absolute top-full left-0 right-0 bg-yellow-50 shadow-lg border-t border-yellow-200">
               <div className="py-4 space-y-2">
                 <button 
                   onClick={() => scrollToSection('inicio')}
-                  className="block w-full text-left px-4 py-3 text-brand hover:bg-brand-cream transition-colors"
+                  className="block w-full text-left px-4 py-3 text-yellow-900 hover:bg-yellow-100 transition-colors"
                 >
                   Início
                 </button>
                 <button 
                   onClick={() => scrollToSection('sobre')}
-                  className="block w-full text-left px-4 py-3 text-brand hover:bg-brand-cream transition-colors"
+                  className="block w-full text-left px-4 py-3 text-yellow-900 hover:bg-yellow-100 transition-colors"
                 >
                   Sobre
                 </button>
                 <button 
                   onClick={() => scrollToSection('servicos')}
-                  className="block w-full text-left px-4 py-3 text-brand hover:bg-brand-cream transition-colors"
+                  className="block w-full text-left px-4 py-3 text-yellow-900 hover:bg-yellow-100 transition-colors"
                 >
                   Serviços
                 </button>
                 <button 
                   onClick={() => scrollToSection('depoimentos')}
-                  className="block w-full text-left px-4 py-3 text-brand hover:bg-brand-cream transition-colors"
+                  className="block w-full text-left px-4 py-3 text-yellow-900 hover:bg-yellow-100 transition-colors"
                 >
                   Depoimentos
                 </button>
                 <button 
                   onClick={() => scrollToSection('contato')}
-                  className="block w-full text-left px-4 py-3 text-brand hover:bg-brand-cream transition-colors"
+                  className="block w-full text-left px-4 py-3 text-yellow-900 hover:bg-yellow-100 transition-colors"
                 >
                   Contato
                 </button>
@@ -172,7 +166,7 @@ const Header = () => {
                     href="https://wa.me/5594984410081" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="btn-secondary w-full text-center block"
+                    className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded-lg font-medium transition-colors w-full text-center block"
                   >
                     Fale Conosco
                   </a>
